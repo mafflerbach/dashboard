@@ -1,0 +1,9 @@
+<ul class="list-group">
+    {% for item in app.menu %}
+
+        <li class="list-group-item">
+            <span class="badge">{{ item.items }}</span>
+            <a href="/list/{{ item.id }}">{{ item.title }}</a>
+        </li>
+    {% endfor %}
+</ul>

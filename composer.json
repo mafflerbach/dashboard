@@ -1,0 +1,17 @@
+{
+    "name": "afflerbach/developerdashboard",
+    "description": "description_text",
+    "minimum-stability": "stable",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Maren Afflerbach",
+            "email": "email@example.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "*",
+        "twig/twig": "*",
+        "symfony/twig-bridge": "*"
+    }
+}
