@@ -1,0 +1,34 @@
+{% if item.sharedFrom is defined %}
+    <div class="dropdown">
+        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown"
+           aria-haspopup="true" role="button" aria-expanded="false">
+                                            <span class="label label-danger"><span
+                                                        class="glyphicon glyphicon-ok"></span></span>
+        </a>
+
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            {% for key, sharedFrom2 in item.sharedFrom %}
+
+                <li>
+                    TODO USer darstellen
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+                                {% if item.sharedTo is defined %}
+                                    <div class="dropdown">
+                                        <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown"
+                                           aria-haspopup="true" role="button" aria-expanded="false">
+                                            <span class="label label-success"><span
+                                                        class="glyphicon glyphicon-ok"></span></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                            {% for key, sharedTo  in item.sharedTo %}
+                                                <li>
+                                                    TODO USer darstellen
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}

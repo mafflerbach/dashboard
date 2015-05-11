@@ -17,6 +17,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 ));
 
 $app->mount('/', new \ddashboard\Page\Index());
+$app->mount('/list/', new \ddashboard\Page\Todolist());
 
 if ($app['debug']) {
     $app->run();

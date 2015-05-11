@@ -24,7 +24,8 @@ class Index implements ControllerProviderInterface
     }
 
 
-    private function todoStub($app) {
+    private function todoStub($app)
+    {
 
         $example = array(
             'id' => 1,
@@ -36,8 +37,8 @@ class Index implements ControllerProviderInterface
                 'title' => 'title',
                 'href' => 'href'
             ),
-            'sharedFrom' => 2
-
+            'sharedFrom' => array(array('id' => 33, 'name' => 'Jhon Doe', 'avatar' => '2341.png'),
+                array('id' => 33, 'name' => 'Jhon Doe', 'avatar' => '2341.png'))
         );
 
         $example2 = array(
@@ -50,37 +51,56 @@ class Index implements ControllerProviderInterface
                 'title' => 'title',
                 'href' => 'href'
             ),
-            'sharedTo' => array(1,2,3,4)
+            'sharedTo' => array(
+                array('id' => 33, 'name' => 'Jhon Doe', 'avatar' => '2341.png'),
+                array('id' => 2, 'name' => 'Mia Doe', 'avatar' => '2341.png'),
+            ),
+        );
+
+        $example3 = array(
+            'id' => 2,
+            'headline' => 'headline 2',
+            'prio' => 'low',
+            'description' => 'desc',
+            'dueDate' => "10.06.2016",
+            'link' => array(
+                'title' => 'title',
+                'href' => 'href'
+            ),
+            'sharedFrom' => array('id' => 33, 'name' => 'Jhon Doe', 'avatar' => '2341.png'),
+            'sharedTo' => array(
+                array('id' => 33, 'name' => 'Jhon Doe', 'avatar' => '2341.png'),
+                array('id' => 2, 'name' => 'Mia Doe', 'avatar' => '2341.png'),
+            ),
         );
 
         $app['todo'] = array(
             $example,
+            $example3,
             $example2
         );
     }
 
-    private function menuStub($app) {
+    private function menuStub($app)
+    {
         $menu = array(
             array(
                 'id' => 1,
                 'title' => 'Inbox',
                 'items' => 23
             ),
-            array (
+            array(
                 'id' => 2,
                 'title' => 'Scheduled',
                 'items' => 2
             ),
-            array (
+            array(
                 'id' => 4,
                 'title' => 'Done',
                 'items' => 3
             )
         );
-
         $app['menu'] = $menu;
-
-
     }
 
 

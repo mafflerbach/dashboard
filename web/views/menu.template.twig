@@ -1,6 +1,8 @@
-<ul class="list-group">
+<ul class="list-group" id="mainmenu">
+    <li class="list-group-item" id="newList">
+        <a href="/list/add">Add List</a>
+    </li>
     {% for item in app.menu %}
-
         <li class="list-group-item">
             <span class="badge">{{ item.items }}</span>
             <a href="/list/{{ item.id }}">{{ item.title }}</a>
